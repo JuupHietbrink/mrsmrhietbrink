@@ -1,5 +1,12 @@
 /* Mrs. & Mr. Hietbrink — Wedding Guest Map */
 
+function startRickRoll() {
+  var overlay = document.getElementById('rickroll-overlay');
+  var video = document.getElementById('rickroll-video');
+  video.src = 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1';
+  overlay.style.display = 'flex';
+}
+
 (function () {
   'use strict';
 
@@ -61,10 +68,15 @@
     showCoverageOnHover: false,
     maxClusterRadius: 60,
     iconCreateFunction: function (cluster) {
+      var totalG = 0;
+      cluster.getAllChildMarkers().forEach(function (m) {
+        totalG += (m.options.guestCount || 0);
+      });
+      var size = Math.max(36, Math.min(60, 20 + Math.sqrt(totalG) * 8));
       return L.divIcon({
-        html: '<div class="cluster-icon">' + cluster.getChildCount() + '</div>',
+        html: '<div class="cluster-icon" style="width:' + size + 'px;height:' + size + 'px;">' + totalG + '</div>',
         className: '',
-        iconSize: [40, 40]
+        iconSize: [size, size]
       });
     }
   });
@@ -75,33 +87,29 @@
   CITIES.forEach(function (d) {
     totalGuests += d.guests;
 
-    var circle = L.circleMarker([d.lat, d.lng], {
-      radius: guestRadius(d.guests),
-      fillColor: FILL,
-      color: STROKE,
-      weight: 2,
-      fillOpacity: 1
+    var size = Math.max(30, Math.min(54, 16 + Math.sqrt(d.guests) * 8));
+    var marker = L.marker([d.lat, d.lng], {
+      guestCount: d.guests,
+      icon: L.divIcon({
+        html: '<div class="guest-bubble" style="width:' + size + 'px;height:' + size + 'px;">' + d.guests + '</div>',
+        className: '',
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+        popupAnchor: [0, -size / 2]
+      })
     });
 
     var word = d.guests === 1 ? 'gast' : 'gasten';
-    circle.bindPopup(
+    marker.bindPopup(
       '<div class="popup-inner">' +
         '<div class="popup-city">\ud83d\udccd ' + d.city + '</div>' +
         '<div class="popup-guests"><strong>' + d.guests + '</strong> ' + word + ' reizen vanuit hier</div>' +
-        '<a class="popup-link" href="' + d.carpool_link + '" target="_blank" rel="noopener">\ud83d\ude97 Deelnemen aan carpool</a>' +
+        '<a class="popup-link" href="javascript:void(0)" onclick="startRickRoll()">\ud83d\ude97 Deelnemen aan carpool</a>' +
       '</div>',
-      { maxWidth: 240 }
+      { maxWidth: 320 }
     );
 
-    circle.on('mouseover', function () {
-      this.setStyle({ fillColor: FILL_H, weight: 3 });
-    });
-    circle.on('mouseout', function () {
-      this.setStyle({ fillColor: FILL, weight: 2 });
-    });
-    circle.on('click', function () { this.openPopup(); });
-
-    clusterGroup.addLayer(circle);
+    clusterGroup.addLayer(marker);
   });
 
   map.addLayer(clusterGroup);
@@ -116,19 +124,9 @@
   var legend = L.control({ position: 'bottomright' });
   legend.onAdd = function () {
     var div = L.DomUtil.create('div', 'legend');
-    var sizes = [
-      { label: '1 gast',    g: 1  },
-      { label: '5 gasten',  g: 5  },
-      { label: '15 gasten', g: 15 }
-    ];
-    var html = '<h4>\ud83c\udf89 Bruiloftsgasten</h4>';
-    sizes.forEach(function (s) {
-      var px = Math.round(guestRadius(s.g) * 2);
-      html += '<div class="legend-row">' +
-        '<span class="legend-circle" style="width:' + px + 'px;height:' + px + 'px;"></span>' +
-        '<span>' + s.label + '</span></div>';
-    });
-    div.innerHTML = html;
+    div.innerHTML = '<h4>\ud83c\udf89 Bruiloftsgasten</h4>' +
+      '<div class="legend-row"><span class="legend-circle" style="width:24px;height:24px;font-size:.7rem;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">3</span><span>Gasten per stad</span></div>' +
+      '<div class="legend-row"><span class="legend-circle" style="width:36px;height:36px;font-size:.7rem;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;background:rgba(180,80,80,.85);border-color:rgba(180,80,80,1);">12</span><span>Cluster (klik om te splitsen)</span></div>';
     return div;
   };
   legend.addTo(map);
