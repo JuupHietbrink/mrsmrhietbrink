@@ -113,15 +113,17 @@ header h1 {
 .popup-guests strong { color: #b45050; }
 
 .popup-link {
-  display: inline-block;
+  display: block;
+  text-align: center;
   background: #b45050;
   color: #fff;
   text-decoration: none;
-  font-size: .8rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 6px;
+  font-size: .88rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
   transition: background .18s;
+  letter-spacing: .02em;
 }
 .popup-link:hover { background: #923e3e; }
 
