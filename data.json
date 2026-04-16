@@ -1,86 +1,32 @@
 [
-  {
-    "city": "Amsterdam",
-    "lat": 52.3676,
-    "lng": 4.9041,
-    "guests": 14,
-    "carpool_link": "https://example.com/carpool/amsterdam"
-  },
-  {
-    "city": "Rotterdam",
-    "lat": 51.9244,
-    "lng": 4.4777,
-    "guests": 9,
-    "carpool_link": "https://example.com/carpool/rotterdam"
-  },
-  {
-    "city": "Utrecht",
-    "lat": 52.0907,
-    "lng": 5.1214,
-    "guests": 11,
-    "carpool_link": "https://example.com/carpool/utrecht"
-  },
-  {
-    "city": "Den Haag",
-    "lat": 52.0705,
-    "lng": 4.3007,
-    "guests": 7,
-    "carpool_link": "https://example.com/carpool/den-haag"
-  },
-  {
-    "city": "Eindhoven",
-    "lat": 51.4416,
-    "lng": 5.4697,
-    "guests": 6,
-    "carpool_link": "https://example.com/carpool/eindhoven"
-  },
-  {
-    "city": "Groningen",
-    "lat": 53.2194,
-    "lng": 6.5665,
-    "guests": 4,
-    "carpool_link": "https://example.com/carpool/groningen"
-  },
-  {
-    "city": "Maastricht",
-    "lat": 50.8514,
-    "lng": 5.6910,
-    "guests": 5,
-    "carpool_link": "https://example.com/carpool/maastricht"
-  },
-  {
-    "city": "Arnhem",
-    "lat": 51.9851,
-    "lng": 5.8987,
-    "guests": 8,
-    "carpool_link": "https://example.com/carpool/arnhem"
-  },
-  {
-    "city": "Breda",
-    "lat": 51.5719,
-    "lng": 4.7683,
-    "guests": 3,
-    "carpool_link": "https://example.com/carpool/breda"
-  },
-  {
-    "city": "Zwolle",
-    "lat": 52.5168,
-    "lng": 6.0830,
-    "guests": 5,
-    "carpool_link": "https://example.com/carpool/zwolle"
-  },
-  {
-    "city": "Haarlem",
-    "lat": 52.3874,
-    "lng": 4.6462,
-    "guests": 6,
-    "carpool_link": "https://example.com/carpool/haarlem"
-  },
-  {
-    "city": "Nijmegen",
-    "lat": 51.8426,
-    "lng": 5.8546,
-    "guests": 4,
-    "carpool_link": "https://example.com/carpool/nijmegen"
-  }
+  { "city": "Utrecht",          "lat": 52.0907, "lng": 5.1214, "guests": 12, "carpool_link": "https://example.com/carpool/utrecht" },
+  { "city": "Houten",           "lat": 52.0284, "lng": 5.1688, "guests": 10, "carpool_link": "https://example.com/carpool/houten" },
+  { "city": "Eindhoven",        "lat": 51.4416, "lng": 5.4697, "guests":  9, "carpool_link": "https://example.com/carpool/eindhoven" },
+  { "city": "Tiel",             "lat": 51.8833, "lng": 5.4333, "guests":  9, "carpool_link": "https://example.com/carpool/tiel" },
+  { "city": "Amsterdam",        "lat": 52.3676, "lng": 4.9041, "guests":  8, "carpool_link": "https://example.com/carpool/amsterdam" },
+  { "city": "Rotterdam",        "lat": 51.9244, "lng": 4.4777, "guests":  5, "carpool_link": "https://example.com/carpool/rotterdam" },
+  { "city": "Brummen",          "lat": 52.0892, "lng": 6.1567, "guests":  5, "carpool_link": "https://example.com/carpool/brummen" },
+  { "city": "Eemnes",           "lat": 52.2525, "lng": 5.2615, "guests":  4, "carpool_link": "https://example.com/carpool/eemnes" },
+  { "city": "'s-Hertogenbosch", "lat": 51.6978, "lng": 5.3037, "guests":  4, "carpool_link": "https://example.com/carpool/den-bosch" },
+  { "city": "Buren",            "lat": 51.9117, "lng": 5.3328, "guests":  2, "carpool_link": "https://example.com/carpool/buren" },
+  { "city": "Den Haag",         "lat": 52.0705, "lng": 4.3007, "guests":  2, "carpool_link": "https://example.com/carpool/den-haag" },
+  { "city": "Wageningen",       "lat": 51.9692, "lng": 5.6654, "guests":  2, "carpool_link": "https://example.com/carpool/wageningen" },
+  { "city": "Nuenen",           "lat": 51.4725, "lng": 5.5492, "guests":  2, "carpool_link": "https://example.com/carpool/nuenen" },
+  { "city": "Gouda",            "lat": 52.0115, "lng": 4.7104, "guests":  2, "carpool_link": "https://example.com/carpool/gouda" },
+  { "city": "Zoelen",           "lat": 51.9000, "lng": 5.3833, "guests":  2, "carpool_link": "https://example.com/carpool/zoelen" },
+  { "city": "Veenendaal",       "lat": 52.0284, "lng": 5.5584, "guests":  2, "carpool_link": "https://example.com/carpool/veenendaal" },
+  { "city": "Hengelo",          "lat": 52.2661, "lng": 6.7927, "guests":  2, "carpool_link": "https://example.com/carpool/hengelo" },
+  { "city": "Soest",            "lat": 52.1738, "lng": 5.2917, "guests":  2, "carpool_link": "https://example.com/carpool/soest" },
+  { "city": "Warnsveld",        "lat": 52.1500, "lng": 6.2333, "guests":  2, "carpool_link": "https://example.com/carpool/warnsveld" },
+  { "city": "Zwolle",           "lat": 52.5168, "lng": 6.0830, "guests":  2, "carpool_link": "https://example.com/carpool/zwolle" },
+  { "city": "Haaren",           "lat": 51.6017, "lng": 5.2233, "guests":  2, "carpool_link": "https://example.com/carpool/haaren" },
+  { "city": "Ophemert",         "lat": 51.8500, "lng": 5.3833, "guests":  2, "carpool_link": "https://example.com/carpool/ophemert" },
+  { "city": "Bladel",           "lat": 51.3700, "lng": 5.2206, "guests":  2, "carpool_link": "https://example.com/carpool/bladel" },
+  { "city": "Amersfoort",       "lat": 52.1561, "lng": 5.3878, "guests":  2, "carpool_link": "https://example.com/carpool/amersfoort" },
+  { "city": "Delft",            "lat": 52.0116, "lng": 4.3571, "guests":  1, "carpool_link": "https://example.com/carpool/delft" },
+  { "city": "Badhoevedorp",     "lat": 52.3339, "lng": 4.7831, "guests":  1, "carpool_link": "https://example.com/carpool/badhoevedorp" },
+  { "city": "Nijmegen",         "lat": 51.8426, "lng": 5.8546, "guests":  1, "carpool_link": "https://example.com/carpool/nijmegen" },
+  { "city": "Nieuwegein",       "lat": 52.0286, "lng": 5.0808, "guests":  1, "carpool_link": "https://example.com/carpool/nieuwegein" },
+  { "city": "Borger",           "lat": 52.9253, "lng": 6.7933, "guests":  1, "carpool_link": "https://example.com/carpool/borger" },
+  { "city": "Schagen",          "lat": 52.7875, "lng": 4.8042, "guests":  1, "carpool_link": "https://example.com/carpool/schagen" }
 ]
