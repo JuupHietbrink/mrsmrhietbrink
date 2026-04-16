@@ -34,8 +34,22 @@ header {
   z-index: 1000;
 }
 
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.header-sub {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #b45050;
+}
+
 header h1 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: .01em;
   color: #3b2e2e;

@@ -58,15 +58,15 @@ fetch('data.json')
       });
 
       // ── Popup ───────────────────────────────────────────────
-      const guestWord = guests === 1 ? 'guest' : 'guests';
+      const guestWord = guests === 1 ? 'gast' : 'gasten';
       circle.bindPopup(`
         <div class="popup-inner">
           <div class="popup-city">📍 ${city}</div>
           <div class="popup-guests">
-            <strong>${guests}</strong> ${guestWord} travelling from here
+            <strong>${guests}</strong> ${guestWord} reizen vanuit hier
           </div>
           <a class="popup-link" href="${carpool_link}" target="_blank" rel="noopener">
-            🚗 Join carpool
+            🚗 Deelnemen aan carpool
           </a>
         </div>
       `, { maxWidth: 240 });
@@ -92,7 +92,7 @@ fetch('data.json')
     // Update header badge
     const badge = document.getElementById('guest-count');
     if (badge) {
-      badge.textContent = `${totalGuests} guests · ${cities.length} cities`;
+      badge.textContent = `${totalGuests} gasten · ${cities.length} steden`;
     }
   })
   .catch(err => console.error('Could not load data.json:', err));
@@ -105,9 +105,9 @@ legend.onAdd = function () {
 
   // Example circle sizes for 1 / 5 / 15 guests
   const sizes = [
-    { label: '1 guest',    guests: 1  },
-    { label: '5 guests',   guests: 5  },
-    { label: '15 guests',  guests: 15 },
+    { label: '1 gast',    guests: 1  },
+    { label: '5 gasten',  guests: 5  },
+    { label: '15 gasten', guests: 15 },
   ];
 
   let rows = sizes.map(({ label, guests }) => {
@@ -121,7 +121,7 @@ legend.onAdd = function () {
       </div>`;
   }).join('');
 
-  div.innerHTML = `<h4>🎉 Wedding guests</h4>${rows}`;
+  div.innerHTML = `<h4>🎉 Bruiloftsgasten</h4>${rows}`;
   return div;
 };
 
