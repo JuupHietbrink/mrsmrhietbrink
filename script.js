@@ -100,11 +100,11 @@ function startRickRoll() {
       })
     });
 
-    var word = d.guests === 1 ? 'gast' : 'gasten';
+    var word = d.guests === 1 ? 'gast reist' : 'gasten reizen';
     marker.bindPopup(
       '<div class="popup-inner">' +
         '<div class="popup-city">\ud83d\udccd ' + d.city + '</div>' +
-        '<div class="popup-guests"><strong>' + d.guests + '</strong> ' + word + ' reizen vanuit hier</div>' +
+        '<div class="popup-guests"><strong>' + d.guests + '</strong> ' + word + ' vanuit hier</div>' +
         '<div class="popup-carpool-msg">\ud83d\ude97 Wil je weten wie hier wonen om eventueel te kunnen carpoolen? Vraag het aan de ceremoniemeesters!</div>' +
       '</div>',
       { maxWidth: 320 }
