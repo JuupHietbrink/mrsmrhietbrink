@@ -115,7 +115,7 @@ header h1 {
 .popup-link {
   display: block;
   text-align: center;
-  background: #b45050;
+  background: #2c3e50;
   color: #fff;
   text-decoration: none;
   font-size: .88rem;
@@ -125,7 +125,7 @@ header h1 {
   transition: background .18s;
   letter-spacing: .02em;
 }
-.popup-link:hover { background: #923e3e; }
+.popup-link:hover { background: #1a252f; }
 
 @media (max-width: 480px) {
   header { padding: 10px 16px; }

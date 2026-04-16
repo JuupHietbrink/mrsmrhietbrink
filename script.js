@@ -95,11 +95,9 @@
 
     circle.on('mouseover', function () {
       this.setStyle({ fillColor: FILL_H, weight: 3 });
-      this.openPopup();
     });
     circle.on('mouseout', function () {
       this.setStyle({ fillColor: FILL, weight: 2 });
-      this.closePopup();
     });
     circle.on('click', function () { this.openPopup(); });
 
