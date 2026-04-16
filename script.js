@@ -105,7 +105,7 @@ function startRickRoll() {
       '<div class="popup-inner">' +
         '<div class="popup-city">\ud83d\udccd ' + d.city + '</div>' +
         '<div class="popup-guests"><strong>' + d.guests + '</strong> ' + word + ' reizen vanuit hier</div>' +
-        '<a class="popup-link" href="javascript:void(0)" onclick="startRickRoll()">\ud83d\ude97 Deelnemen aan carpool</a>' +
+        '<div class="popup-carpool-msg">\ud83d\ude97 Wil je weten wie hier wonen om eventueel te kunnen carpoolen? Vraag het aan de ceremoniemeesters!</div>' +
       '</div>',
       { maxWidth: 320 }
     );

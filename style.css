@@ -112,6 +112,15 @@ header h1 {
 .popup-guests { font-size: .82rem; color: #6b5b5b; margin-bottom: 10px; }
 .popup-guests strong { color: #b45050; }
 
+.popup-carpool-msg {
+  font-size: .82rem;
+  color: #5a4a4a;
+  background: #f5f0eb;
+  padding: 8px 12px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
 .popup-link {
   display: block;
   text-align: center;
